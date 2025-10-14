@@ -1,2 +1,2 @@
 # Almaru1.github.io
-### Please Visit [Almaru1](https://Almaru1.github.io/Almaru1)
+### Please Visit [Almaru1](https://Almaru1.github.io)
