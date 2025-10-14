@@ -1,25 +1,86 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ca">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pàgina de Presentació</title>
-  <!-- Bootstrap CSS -->
+  <title>Projecte Final - Aleix</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      scroll-behavior: smooth;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Navbar */
+    .navbar {
+      backdrop-filter: blur(10px);
+      background-color: rgba(0, 0, 0, 0.75) !important;
+    }
+
+    /* Hero */
+    #hero {
+      background: linear-gradient(135deg, #007bff 0%, #00d4ff 100%);
+      color: white;
+      padding: 120px 0;
+      text-align: center;
+    }
+
+    #hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    #hero p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    /* Cards */
+    .card {
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Footer */
+    footer {
+      background-color: #111;
+      color: #ccc;
+      padding: 20px 0;
+    }
+
+    footer a {
+      color: #00d4ff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">La Meva Web</a>
+      <a class="navbar-brand fw-bold" href="#">Projecte Aleix</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#about">Sobre mi</a></li>
-          <li class="nav-item"><a class="nav-link" href="#services">Serveis</a></li>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#about">Descripció</a></li>
+          <li class="nav-item"><a class="nav-link" href="#content">Contingut</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contacte</a></li>
         </ul>
       </div>
@@ -27,43 +88,47 @@
   </nav>
 
   <!-- Hero -->
-  <section class="bg-light text-center py-5">
+  <section id="hero">
     <div class="container">
-      <h1 class="display-4 fw-bold">Benvingut/da a la meva pàgina!</h1>
-      <p class="lead">Una breu descripció sobre qui sóc o què faig.</p>
-      <a href="#contact" class="btn btn-primary btn-lg mt-3">Contacta’m</a>
+      <h1>Projecte Final de Curs</h1>
+      <p>Alumne: <strong>Aleix</strong></p>
+      <a href="#about" class="btn btn-light btn-lg mt-3">Veure més</a>
     </div>
   </section>
 
-  <!-- Sobre mi -->
-  <section id="about" class="py-5">
-    <div class="container text-center">
-      <h2 class="mb-4">Sobre mi</h2>
-      <p class="text-muted">Aquí pots escriure una descripció breu sobre tu o la teva empresa. Explica la teva experiència, objectius o allò que et diferencia.</p>
+  <!-- Descripció -->
+  <section id="about" class="py-5 text-center">
+    <div class="container">
+      <h2 class="fw-bold mb-4">Descripció del Projecte</h2>
+      <p class="text-muted mx-auto" style="max-width:700px;">
+        Aquesta secció serà la descripció del projecte final de curs, on s’explicarà en què consisteix i quines competències o coneixements s’hi han aplicat.
+        <br><br>
+        (Encara pendent de definir — es completarà quan el projecte estigui decidit.)
+      </p>
     </div>
   </section>
 
-  <!-- Serveis -->
-  <section id="services" class="bg-light py-5">
+  <!-- Contingut o àrees -->
+  <section id="content" class="bg-light py-5">
     <div class="container text-center">
-      <h2 class="mb-4">Serveis</h2>
-      <div class="row">
+      <h2 class="fw-bold mb-5">Àrees del projecte</h2>
+      <div class="row g-4">
         <div class="col-md-4">
-          <div class="card p-4 mb-3">
-            <h4>Servei 1</h4>
-            <p class="text-muted">Descripció breu del servei.</p>
+          <div class="card p-4">
+            <h4>🧠 Coneixements</h4>
+            <p class="text-muted">Aquí pots afegir què s’ha après durant el curs i com s’aplica al projecte.</p>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="card p-4 mb-3">
-            <h4>Servei 2</h4>
-            <p class="text-muted">Descripció breu del servei.</p>
+          <div class="card p-4">
+            <h4>💻 Tecnologia</h4>
+            <p class="text-muted">Secció per descriure les eines, llenguatges o plataformes utilitzades.</p>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="card p-4 mb-3">
-            <h4>Servei 3</h4>
-            <p class="text-muted">Descripció breu del servei.</p>
+          <div class="card p-4">
+            <h4>🚀 Objectius</h4>
+            <p class="text-muted">Espai per indicar què es vol aconseguir amb el projecte final.</p>
           </div>
         </div>
       </div>
@@ -71,20 +136,19 @@
   </section>
 
   <!-- Contacte -->
-  <section id="contact" class="py-5">
-    <div class="container text-center">
-      <h2 class="mb-4">Contacte</h2>
-      <p>Envia’m un missatge o segueix-me a les xarxes socials.</p>
-      <a href="mailto:example@email.com" class="btn btn-outline-dark">Enviar correu</a>
+  <section id="contact" class="py-5 text-center">
+    <div class="container">
+      <h2 class="fw-bold mb-4">Contacte</h2>
+      <p class="text-muted mb-4">Per a més informació o dubtes, pots contactar-me:</p>
+      <a href="mailto:almaru1@insplamos.cat" class="btn btn-primary btn-lg">almaru1@insplamos.cat</a>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-dark text-light text-center py-3">
-    <p class="mb-0">&copy; 2025 La Meva Web. Tots els drets reservats.</p>
+  <footer class="text-center">
+    <p>&copy; 2025 Aleix | Projecte Final de Curs | Feta amb 💙 i Bootstrap</p>
   </footer>
 
-  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
